@@ -1,0 +1,9 @@
+export {default as About} from './About/About';
+export {default as Contact} from './Contact/Contact';
+export {default as FAQs} from './FAQs/FAQs';
+export {default as Features} from './Features/Features';
+export {default as Footer} from './Footer/Footer';
+export {default as Home} from './Home/Home';
+export {default as More} from './More/More';
+export {default as Navbar} from './Navbar/Navbar';
+export {default as Newsletter} from './Newsletter/Newsletter';
