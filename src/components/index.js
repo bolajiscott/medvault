@@ -7,3 +7,5 @@ export {default as Home} from './Home/Home';
 export {default as More} from './More/More';
 export {default as Navbar} from './Navbar/Navbar';
 export {default as Newsletter} from './Newsletter/Newsletter';
+export {default as NewsletterBar} from './NewsletterBar/NewsletterBar';
+export {default as SearchBar} from './SearchBar/SearchBar';

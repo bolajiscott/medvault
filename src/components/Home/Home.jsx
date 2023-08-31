@@ -6,7 +6,7 @@ import scrollPointer from '../../assets/icons/scroll-pointer.svg';
 const Home = () => {
   return (
     <section id="home">
-      <div className="bg-home-gradient h-full md:min-h-screen">
+      <div className="bg-home-gradient h-full">
         <div className="flex justify-between w-[90%] max-w-[1200px] mx-auto pt-[152px]">
           <div className='w-1/2'>
             <div className='mt-[32px]'>
@@ -27,7 +27,7 @@ const Home = () => {
             </div>
           </div>
           <div className='w-1/2'>
-            <img src={phones} alt="Rideon on phone" className='ml-auto max-h-[843px]' />
+            <img src={phones} alt="Rideon on phone" className='ml-auto max-h-[843px] -mb-32' />
           </div>
         </div>
       </div>
