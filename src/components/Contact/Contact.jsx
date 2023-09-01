@@ -1,9 +1,9 @@
 
 const Contact = () => {
   return (
-    <section id="contact" className="h-screen w-full">
-      <div className="flex w-[90%] min-h-[80vh] my-[104px] mx-auto">
-        <div className="bg-primary w-1/2 p-[104px]">
+    <section id="contact" className="min-h-screen w-full">
+      <div className="flex flex-col md:flex-row w-[90%] my-[104px] mx-auto">
+        <div className="bg-primary w-full md:w-1/2 p-10 sm:p-20 md:p-[104px]">
           <div className="mb-[50px]">
             <h3 className="text-4xl font-bold mb-1">Talk with us</h3>
             <p className="text-lg">
@@ -28,7 +28,7 @@ const Contact = () => {
             </ul>
           </div>
         </div>
-        <div className="w-1/2 bg-[#F8F9FA] p-[104px]">
+        <div className="w-full md:w-1/2 bg-[#F8F9FA] p-10 px-4 sm:p-20 md:p-[104px]">
           <div>
             <div className="flex flex-col mb-10">
               <label htmlFor="full-name" className="font-bold mb-[18px]">Full Name</label>

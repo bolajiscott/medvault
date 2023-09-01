@@ -6,16 +6,16 @@ import hamburger from '../../assets/images/hamburger-image.jpg';
 const About = () => {
   return (
     <section id="about">
-      <div className="w-[90%] mx-auto max-w-[1200px] -mb-20 mt-32">
-        <div className='mt-3 mb-16'>
+      <div className="w-[90%] mx-auto max-w-[1200px] -mb-20 mt-40 md:mt-32">
+        <div className='mt-3 mb-8 md:mb-16'>
           <h2 className='font-bold text-4xl text-center mb-4'>Top restaurants and more</h2>
           <p className='text-[#474747] text-lg text-center max-w-[60ch] mx-auto'>
             Lorem ipsum dolor sit amet, consectetur adipiscing 
             elit. Morbi cursus et nisl et vestibulum.
           </p>
         </div>
-        <div className='flex justify-evenly'>
-          <div className='flex flex-col justify-center items-center'>
+        <div className='flex justify-evenly flex-col md:flex-row'>
+          <div className='flex flex-col justify-center items-center mb-10 md:mb-0'>
             <div className='h-24 flex justify-center items-center'>
               <img src={about1} alt="Top restaurant" />
             </div>
@@ -25,7 +25,7 @@ const About = () => {
               your favourite food or explore new restaurants nearby!
             </p>
           </div>
-          <div className='flex flex-col justify-center items-center'>
+          <div className='flex flex-col justify-center items-center mb-10 md:mb-0'>
             <div className='h-24 flex justify-center items-center'>
               <img src={about2} alt="Top restaurant" />
             </div>
@@ -52,7 +52,7 @@ const About = () => {
           </div>
         </div>
       </div>
-        <div className='rotate-180'>
+        <div className='rotate-180 w-full'>
           <svg xmlns="http://www.w3.org/2000/svg" width="1436" height="175" viewBox="0 0 1436 175" fill="none">
             <path fillRule="evenodd" clipRule="evenodd" d="M1.5299e-05 -0.000125889L1440 0L1440 175C1200 121.667 960 95 720 94.9999C480 94.9999 240 121.667 0 175L1.5299e-05 -0.000125889Z" fill="#F3C723"/>
           </svg>

@@ -15,7 +15,7 @@ const Newsletter = () => {
             raesent at volutpat elit. Donec consequat aliquet dui, eu fermentum ex viverra eget.Morbi consectetur ligula sit amet nisi.
           </p>
         </div>
-        <div className="w-full md:w-3/5 mx-auto max-w-[457px] mb-[57px]">
+        <div className="w-[90%] md:w-3/5 mx-auto max-w-[457px] mb-[57px]">
           <NewsletterBar />
         </div>
         <div className="rotate-180 absolute bottom-0 left-0 w-full">
