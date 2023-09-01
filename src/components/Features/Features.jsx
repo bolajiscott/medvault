@@ -1,9 +1,9 @@
 import featuresImg from '../../assets/images/features-mobile.png'
 const Features = () => {
   return (
-    <section id="features" className='bg-primary'>
-      <div className='max-w-[1200px] mx-auto'>
-        <div className='-mt-3 pt-3 mb-8 md:mb-16 w-[90%] max-w-[1200px] mx-auto'>
+    <section id="features" className='bg-primary pt-10 mt-24'>
+      <div className='max-w-[1200px] mx-auto pb-10'>
+        <div className='-mt-3 pt-16 md:pt-24 mb-8 md:mb-16 w-[90%] max-w-[1200px] mx-auto'>
           <h2 className='font-bold text-4xl text-center mb-4'>Lorem Ipsum Dolor Sit Amet </h2>
           <p className='text-[#474747] text-lg text-center max-w-[60ch] mx-auto'>
             Raesent at volutpat elit. Donec consequat aliquet dui, eu fermentum ex viverra 
@@ -80,6 +80,11 @@ const Features = () => {
           </div>
         </div>
       </div>
+      <div className='rotate-180 w-full absolute overflow-hidden left-0 -mt-[90px] mb-[90px]'>
+          <svg className="relative z-50 block w-[calc(100%_+_1.3px)] h-[175px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1436 175" fill="none">
+            <path fillRule="evenodd" clipRule="evenodd" d="M1.5299e-05 -0.000125889L1440 0L1440 175C1200 121.667 960 95 720 94.9999C480 94.9999 240 121.667 0 175L1.5299e-05 -0.000125889Z" fill="#FFFFFF"/>
+          </svg>
+        </div>
     </section>
   )
 }

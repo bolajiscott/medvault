@@ -34,7 +34,7 @@ const More = () => {
           </div>
         </div>
         <div>
-          <div className='flex justify-center mt-16 md:mt-0'>
+          <div className='flex justify-center mt-16 sm:mt-10 md:mt-20'>
             <img src={moreMobile} alt="More features on mobile screen" />
           </div>
         </div>

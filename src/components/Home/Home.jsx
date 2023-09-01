@@ -7,11 +7,11 @@ const Home = () => {
   return (
     <section id="home">
       <div className="bg-home-gradient h-full">
-        <div className="flex flex-col md:flex-row justify-between w-[90%] max-w-[1200px] mx-auto pt-[152px]">
+        <div className="flex flex-col md:flex-row justify-between w-[90%] max-w-[1200px] mx-auto pt-20 md:pt-[152px]">
           <div className='w-full md:w-1/2'>
             <div className='mt-[32px]'>
               <h1 className="font-bold text-[40px] md:text-[56px] leading-[58px] md:leading-[68px]">Professional Drivers, Food and Many More...</h1>
-              <p className='my-10 text-[#474747] text-xl'>
+              <p className='my-10 text-[#474747] text-xl text-justify md:text-left'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing 
                 elit. Aenean molestie vulputate felis ac luctus. Nunc 
                 a vehicula sapien. Vestibulum rhoncus mi magna.
