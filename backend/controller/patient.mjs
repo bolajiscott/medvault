@@ -1,12 +1,14 @@
-import axios from "axios";
-import formdata from "form-data";
-import fs from "fs";
 import { patient } from "../models/patient.mjs";
-import { uploadToweb3Storage } from "../vendor/web3Storage.mjs";
+import { validationResult } from "express-validator";
+import { retrieveRecord, uploadToweb3Storage } from "../vendor/web3Storage.mjs";
 const web3URL = process.env.WER3URL;
 const web3Token = process.env.WEB3TOKEN;
 
 export const UploadPatientRecord = async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
   const data = req.body;
   const userData = {
     fullName: data?.fullName,
@@ -14,7 +16,13 @@ export const UploadPatientRecord = async (req, res) => {
     email: data?.email,
     diseases: data?.diseases,
   };
-  const fileBuffer = req.file.buffer;
+  const fileBuffer = req.file?.buffer;
+  if (!fileBuffer) {
+    res.status(400).json({
+      message: "Patient medical record file was not uploaded",
+    });
+    return;
+  }
 
   const patientExist = await patient.findOne({ email: data.email });
   if (patientExist !== null) {
@@ -61,4 +69,40 @@ export const UploadPatientRecord = async (req, res) => {
     },
   });
 };
-export const RetrievePatientRecord = (req, res) => {};
+export const RetrievePatientRecord = async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+  const data = req.body;
+
+  const patientExist = await patient.findOne({ email: data.email });
+  if (patientExist === null) {
+    res.status(400).json({
+      message: "Patients record does not exist",
+    });
+    return;
+  }
+
+  const cid = patientExist.web3CID;
+
+  const file = await retrieveRecord(cid);
+  if (!file) {
+    res.status(200).json({
+      message: "Unable to retrieve patient file",
+    });
+    return;
+  }
+
+  res.status(200).json({
+    message: "Patient record retrieved successfully",
+    data: {
+      fullName: patientExist.fullName,
+      diagnosis: patientExist.diagnosis,
+      diseases: patientExist.diseases,
+      file: {},
+    },
+  });
+};
+
+export const RetrieveAllRecords = async (req, res) => {};
