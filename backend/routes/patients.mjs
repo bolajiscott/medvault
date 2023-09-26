@@ -1,6 +1,6 @@
 import Router from "express";
 import multer from "multer";
-import { body, validationResult } from "express-validator";
+import { body } from "express-validator";
 import {
   RetrieveAllRecords,
   RetrievePatientRecord,

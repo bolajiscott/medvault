@@ -1,8 +1,6 @@
 import { patient } from "../models/patient.mjs";
 import { validationResult } from "express-validator";
 import { retrieveRecord, uploadToweb3Storage } from "../vendor/web3Storage.mjs";
-const web3URL = process.env.WER3URL;
-const web3Token = process.env.WEB3TOKEN;
 
 export const UploadPatientRecord = async (req, res) => {
   const errors = validationResult(req);
