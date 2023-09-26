@@ -2,6 +2,7 @@ import Router from "express";
 import multer from "multer";
 import { body, validationResult } from "express-validator";
 import {
+  RetrieveAllRecords,
   RetrievePatientRecord,
   UploadPatientRecord,
 } from "../controller/patient.mjs";
@@ -45,5 +46,7 @@ router
     RetrievePatientRecord
   )
   .all(MethodNotAllowed);
+
+router.route("/all").get(RetrieveAllRecords).all(MethodNotAllowed);
 
 export default router;

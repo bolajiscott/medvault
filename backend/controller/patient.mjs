@@ -105,4 +105,18 @@ export const RetrievePatientRecord = async (req, res) => {
   });
 };
 
-export const RetrieveAllRecords = async (req, res) => {};
+export const RetrieveAllRecords = async (req, res) => {
+  const patients = await patient.find();
+  if (patients.length === 0) {
+    res.status(404).json({
+      message: "No record found",
+    });
+  }
+
+  res.status(200).json({
+    message: "All records",
+    data: {
+      patients,
+    },
+  });
+};
