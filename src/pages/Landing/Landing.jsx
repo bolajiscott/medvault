@@ -1,8 +1,9 @@
-import { Footer, SignUp } from "../../components";
+import { Navbar, Footer, SignUp } from "../../components";
 
 const Landing = () => {
   return (
     <>
+      <Navbar />
       <SignUp />
       <Footer />
     </>
