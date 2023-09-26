@@ -49,6 +49,18 @@ const SignUp = () => {
                 className="bg-[#FEFFFF] p-[14px] placeholder:text-[#999]"
               />
             </div>
+
+            <div className="flex flex-col mb-10">
+              <label htmlFor="email" className="font-bold mb-[18px]">
+                Email
+              </label>
+              <input
+                type="text"
+                id="email"
+                placeholder="Enter your email address"
+                className="bg-[#FEFFFF] p-[14px] placeholder:text-[#999]"
+              />
+            </div>
             <div className="flex flex-col mb-10">
               <label htmlFor="file" className="font-bold mb-[18px]">
                 Upload File
