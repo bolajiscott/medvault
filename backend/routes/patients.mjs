@@ -40,9 +40,6 @@ router
     ],
     UploadPatientRecord
   )
-  .all(MethodNotAllowed);
-router
-  .route("/")
   .get(
     [body("email").isEmail().withMessage("Invalid email address")],
     RetrievePatientRecord
