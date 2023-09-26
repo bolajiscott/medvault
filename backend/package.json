@@ -1,11 +1,20 @@
 {
   "name": "medvault",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.mjs",
+  "type": "module",
   "repository": "git@github.com:bolajiscott/medvault.git",
   "author": "ladi <ladigrillo48@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.mjs",
+    "build": "yarn build"
+  },
   "dependencies": {
-    "express": "^4.18.2"
+    "axios": "^1.5.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "form-data": "^4.0.0",
+    "mongoose": "^7.5.3"
   }
 }

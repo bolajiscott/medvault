@@ -1,7 +1,7 @@
 import { Router } from "express";
-
+import patients from "./patients.mjs";
 const router = Router();
 
-router.use("/patients");
+router.use("/patients", patients);
 
 export default router;
