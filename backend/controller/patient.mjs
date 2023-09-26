@@ -89,7 +89,7 @@ export const RetrievePatientRecord = async (req, res) => {
   const file = await retrieveRecord(cid);
   if (!file) {
     res.status(200).json({
-      message: "Unable to retrieve patient file",
+      message: `Unable to retrieve file for ${patientExist.fullName}`,
     });
     return;
   }
