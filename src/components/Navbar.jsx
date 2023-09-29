@@ -1,4 +1,3 @@
-import { NavHashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 
@@ -25,7 +24,7 @@ const Navbar = () => {
       <div className='flex justify-between items-center w-[90%] max-w-[1200px] mx-auto'>
         <div>
           <Link to="/">
-            <h1 className="font-bold text-[60px]">MV</h1>
+            <h1 className="font-bold text-[40px] md:text-[60px]">MV</h1>
           </Link>
         </div>
         <button ref={togglerRef} onClick={handleOpenNav} className='fixed md:hidden top-8 right-8 z-50 transition duration-200 hover:scale-125 active:scale-100'>
